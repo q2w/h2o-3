@@ -74,8 +74,8 @@ fi
 
 # Launch last driver JVM.  All output redir'd at the OS level to sandbox files,
 # and tee'd to stdout so we can watch.
-($JVM -Dh2o.arg.client=true $JACOCO_FLAG org.junit.runner.JUnitCore water.ClientTest 2>&1 ; echo $? > $OUTDIR/status.0) | tee --append $OUTDIR/out.0
-($JVM -Dh2o.arg.client=true $JACOCO_FLAG org.junit.runner.JUnitCore water.ClientTest 2>&1 ; echo $? > $OUTDIR/status.0) | tee --append $OUTDIR/out.0
-($JVM -Dh2o.arg.client=true $JACOCO_FLAG org.junit.runner.JUnitCore water.ClientTest 2>&1 ; echo $? > $OUTDIR/status.0) | tee --append $OUTDIR/out.0
+($JVM -Dh2o.arg.client=true $JACOCO_FLAG ${ADDITIONAL_TEST_JVM_OPTS} org.junit.runner.JUnitCore water.ClientTest 2>&1 ; echo $? > $OUTDIR/status.0) | tee --append $OUTDIR/out.0
+($JVM -Dh2o.arg.client=true $JACOCO_FLAG ${ADDITIONAL_TEST_JVM_OPTS} org.junit.runner.JUnitCore water.ClientTest 2>&1 ; echo $? > $OUTDIR/status.0) | tee --append $OUTDIR/out.0
+($JVM -Dh2o.arg.client=true $JACOCO_FLAG ${ADDITIONAL_TEST_JVM_OPTS} org.junit.runner.JUnitCore water.ClientTest 2>&1 ; echo $? > $OUTDIR/status.0) | tee --append $OUTDIR/out.0
 
 cleanup
